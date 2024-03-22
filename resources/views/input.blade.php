@@ -1,0 +1,1 @@
+<input type="text"  value="{{ auth()->user()->id }}" required>
