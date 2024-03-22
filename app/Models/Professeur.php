@@ -20,7 +20,8 @@ class Professeur extends Authenticatable implements FilamentUser
         'email',
         'password',
         'email_verified_at',
-        'master_id'
+        'master_id',
+        'specialisation',
     ];
 
     protected $hidden = [

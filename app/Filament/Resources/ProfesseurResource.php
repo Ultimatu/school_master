@@ -45,6 +45,10 @@ class ProfesseurResource extends Resource
                     ->rules('unique:professeurs,email')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('specialisation')
+                    ->required()
+                    ->label('Spécialisation')
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('password')
                     ->password()
                     ->label('Mot de passe')
@@ -68,6 +72,8 @@ class ProfesseurResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('specialisation')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email_verified_at')
                     ->dateTime()
